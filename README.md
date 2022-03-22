@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://user-images.githubusercontent.com/66264766/159574428-b6017a75-f9b3-44ee-a9e7-391fc80b3b75.png" alt="dt money" width="200"/>
+   <img src="https://user-images.githubusercontent.com/66264766/159578209-e135f1a6-d7ac-4175-96df-1b3b11c60c12.png" alt="dt money" width="400"/>
 </p>
 
 <h1 align="center">Rich and Morty</h1>
@@ -17,7 +17,7 @@
   </a>
 </p>
 
-<p align="center">Breve descricao do projeto</p>
+<p align="center">Esse projeto tem o intuito de testar o pacote de network disponibilizado pela Popcode</p>
 
 <hr />
 
