@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../historico/rick_and_morty/android"
+		},
+		{
+			"path": "../../historico/rick_and_morty/ios"
+		},
+		{
+			"path": "../../historico/rick_and_morty/lib"
+		},
+		{
+			"path": "../../historico/rick_and_morty/web"
+		},
+		{
+			"path": "../../historico/rick_and_morty/windows"
+		}
+	],
+	"settings": {}
+}

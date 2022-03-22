@@ -1,8 +1,8 @@
 <p align="center">
-   <img src="https://user-images.githubusercontent.com/46109133/149638236-08219c77-c837-4883-b428-8bd5c864e850.png" alt="dt money" width="200"/>
+   <img src="https://user-images.githubusercontent.com/66264766/159574428-b6017a75-f9b3-44ee-a9e7-391fc80b3b75.png" alt="dt money" width="200"/>
 </p>
 
-<h1 align="center">Nome do projeto</h1>
+<h1 align="center">Rich and Morty</h1>
 
 <p align="center">
    <a href="https://www.linkedin.com/in/igor-sthaynny/">
