@@ -17,6 +17,16 @@ class ResultApi {
     required this.characters,
   });
 
+  factory ResultApi.empty() {
+    return ResultApi(
+      count: 0,
+      page: 0,
+      next: true,
+      prev: false,
+      characters: [],
+    );
+  }
+
   factory ResultApi.fromMap(Map<String, dynamic> map) {
     final Map<String, dynamic> info = map['info'];
     final Map<String, dynamic> result = map['result'];
