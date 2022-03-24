@@ -39,7 +39,7 @@ TextStyle detailName = GoogleFonts.dmSans(
 );
 
 TextStyle appbarStyle = GoogleFonts.dmSans(
-  fontSize: 25.0,
+  fontSize: 20.0,
   fontWeight: FontWeight.bold,
 );
 

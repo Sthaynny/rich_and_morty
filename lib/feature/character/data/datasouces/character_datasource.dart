@@ -10,7 +10,7 @@ class CharacterDatasource {
       query['name'] = name;
     }
     final endpoint = Endpoint(
-      suffixPath: 'character',
+      suffixPath: '/character',
       queryParameters: query,
     );
 

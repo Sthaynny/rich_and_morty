@@ -3,6 +3,7 @@ import 'package:rick_and_morty/feature/character/data/datasouces/character_datas
 import 'package:rick_and_morty/feature/character/data/repositories/character_respository.dart';
 import 'package:rick_and_morty/feature/character/domain/repositories/icharacter_repository.dart';
 import 'package:rick_and_morty/feature/character/domain/usecases/get_character_usecase.dart';
+import 'package:rick_and_morty/feature/character/presentation/controller/character_controller.dart';
 
 class CharacterInjection {
   void call(GetIt dependency) {
@@ -16,6 +17,12 @@ class CharacterInjection {
     );
     dependency.registerFactory(
       () => GetCharacterUsecase(
+        dependency(),
+      ),
+    );
+
+    dependency.registerFactory(
+      () => CharacterController(
         dependency(),
       ),
     );

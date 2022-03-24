@@ -28,18 +28,20 @@ class CharacterEntity {
     OriginEntity? location,
     List<String>? episode,
   }) {
-    this.id = 0;
-    this.name = '';
-    this.status = '';
-    this.species = '';
-    this.type = '';
-    this.gender = '';
-    this.image = '';
-    this.url = '';
-    this.created = '';
+    this.id = id ?? 0;
+    this.name = name ?? '';
+    this.status = status ?? '';
+    this.species = species ?? '';
+    this.type = type ?? '';
+    this.gender = gender ?? '';
+    this.image = image ?? '';
+    this.url = url ?? '';
+    this.created = created ?? '';
     this.origin = origin ?? OriginEntity();
     this.location = location ?? OriginEntity();
 
     this.episode = episode ?? [];
   }
+
+  bool get isAlive => status.toLowerCase().compareTo('alive') == 0;
 }

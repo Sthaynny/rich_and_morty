@@ -6,7 +6,10 @@ class OriginModel extends OriginEntity {
   OriginModel({
     String name = '',
     String url = '',
-  });
+  }) : super(
+          name: name,
+          url: url,
+        );
 
   OriginEntity get fromEntity => OriginEntity(name: name, url: url);
 
@@ -28,10 +31,12 @@ class OriginModel extends OriginEntity {
   }
 
   factory OriginModel.fromMap(Map<String, dynamic> map) {
-    return OriginModel(
+    final model = OriginModel(
       name: map['name'],
       url: map['url'],
     );
+
+    return model;
   }
 
   String toJson() => json.encode(toMap());

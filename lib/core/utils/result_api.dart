@@ -29,19 +29,14 @@ class ResultApi {
 
   factory ResultApi.fromMap(Map<String, dynamic> map) {
     final Map<String, dynamic> info = map['info'];
-    final Map<String, dynamic> result = map['result'];
+    final listCharacters =
+        (map['results'] as List).map((e) => CharacterModel.fromMap(e)).toList();
     return ResultApi(
       count: info['count']?.toInt() ?? 0,
       page: info['page']?.toInt() ?? 0,
       next: info.containsKey('next') ? true : false,
       prev: info.containsKey('prev') ? true : false,
-      characters: result.containsKey('characters')
-          ? List<CharacterEntity>.from(
-              map['result']['characters']?.map(
-                (x) => CharacterModel.fromMap(x),
-              ),
-            )
-          : [],
+      characters: listCharacters,
     );
   }
 

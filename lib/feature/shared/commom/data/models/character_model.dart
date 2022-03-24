@@ -52,18 +52,18 @@ class CharacterModel extends CharacterEntity {
 
   factory CharacterModel.fromMap(Map<String, dynamic> map) {
     return CharacterModel(
-      id: map['id']?.toInt() ?? 0,
-      name: map['name'] ?? '',
-      status: map['status'] ?? '',
-      species: map['species'] ?? '',
-      type: map['type'] ?? '',
-      gender: map['gender'] ?? '',
+      id: map['id']?.toInt(),
+      name: map['name'],
+      status: map['status'],
+      species: map['species'],
+      type: map['type'],
+      gender: map['gender'],
       origin: OriginModel.fromMap(map['origin']),
       location: OriginModel.fromMap(map['location']),
-      image: map['image'] ?? '',
+      image: map['image'],
       episode: List<String>.from(map['episode']),
-      url: map['url'] ?? '',
-      created: map['created'] ?? '',
+      url: map['url'],
+      created: map['created'],
     );
   }
 
