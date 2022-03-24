@@ -71,7 +71,5 @@ class CharacterController extends GetxController {
     } else {
       status.value = CharacterStatus.error;
     }
-
-    status.value = CharacterStatus.success;
   }
 }

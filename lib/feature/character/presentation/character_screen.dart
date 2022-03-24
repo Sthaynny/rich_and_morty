@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:rick_and_morty/feature/character/presentation/controller/character_controller.dart';
+import 'package:rick_and_morty/feature/character/presentation/widgets/card_character_shimmer.dart';
 import 'package:rick_and_morty/feature/character/presentation/widgets/card_character_widget.dart';
 import 'package:rick_and_morty/feature/character/presentation/widgets/search_character_widget.dart';
 import 'package:rick_and_morty/feature/shared/constants.dart';
@@ -62,6 +63,13 @@ class _CharacterScreenState extends State<CharacterScreen> {
               controller: scrollController,
               children: [
                 ...body(),
+                if (controller.isNextPageLoading)
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Center(
+                      child: CircularProgressIndicator(),
+                    ),
+                  )
               ],
             ),
           ),
@@ -73,11 +81,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
   List<Widget> body() {
     switch (controller.status.value) {
       case CharacterStatus.loading:
-        return [
-          const Center(
-            child: CircularProgressIndicator(),
-          )
-        ];
+        return List.generate(20, (index) => const ChardCharacterShimmer());
 
       case CharacterStatus.success:
         return List.generate(
@@ -88,7 +92,9 @@ class _CharacterScreenState extends State<CharacterScreen> {
         );
       default:
         return [
-          Center(
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 50, vertical: 50),
+            alignment: Alignment.center,
             child: Text(
               'Sorry, your search could not be found. Please try again.',
               style: originName,

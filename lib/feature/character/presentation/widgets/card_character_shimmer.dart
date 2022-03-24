@@ -34,46 +34,53 @@ class ChardCharacterShimmer extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
+                      const SizedBox(height: 10.0),
                       _shimmer(
-                        const SizedBox(
-                          height: 30,
-                          width: 60,
+                        Container(
+                          height: 20,
+                          width: 150,
+                          color: Colors.white,
                         ),
                       ),
-                      const SizedBox(height: 8.0),
+                      const SizedBox(height: 20.0),
                       Row(
                         children: <Widget>[
-                          Container(
-                            height: 12,
-                            width: 12,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.green,
+                          _shimmer(
+                            Container(
+                              height: 12,
+                              width: 12,
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.green,
+                              ),
                             ),
                           ),
                           const SizedBox(width: 5),
                           _shimmer(
-                            const SizedBox(
-                              height: 20,
-                              width: 60,
+                            Container(
+                              height: 10,
+                              width: 100,
+                              color: Colors.white,
                             ),
                           ),
                         ],
                       ),
                       const SizedBox(
-                        height: 8.0,
+                        height: 25.0,
                       ),
                       _shimmer(
-                        const SizedBox(
-                          height: 30,
-                          width: 60,
+                        Container(
+                          height: 20,
+                          width: 80,
+                          color: Colors.white,
                         ),
                       ),
-                      const SizedBox(height: 5.0),
+                      const SizedBox(height: 10.0),
                       _shimmer(
-                        const SizedBox(
-                          height: 15,
-                          width: 60,
+                        Container(
+                          height: 20,
+                          width: 140,
+                          color: Colors.white,
                         ),
                       ),
                     ],
