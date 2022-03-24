@@ -99,7 +99,10 @@ class _CharacterScreenState extends State<CharacterScreen> {
               'Sorry, your search could not be found. Please try again.',
               style: originName,
             ),
-          )
+          ),
+          Image.asset(
+            'assets/images/error.png',
+          ),
         ];
     }
   }

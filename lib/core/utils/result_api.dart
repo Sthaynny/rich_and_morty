@@ -34,8 +34,8 @@ class ResultApi {
     return ResultApi(
       count: info['count']?.toInt() ?? 0,
       page: info['page']?.toInt() ?? 0,
-      next: info.containsKey('next') ? true : false,
-      prev: info.containsKey('prev') ? true : false,
+      next: info['next'] != null ? true : false,
+      prev: info['prev'] != null ? true : false,
       characters: listCharacters,
     );
   }
