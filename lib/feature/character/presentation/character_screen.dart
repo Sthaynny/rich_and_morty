@@ -90,13 +90,18 @@ class _CharacterScreenState extends State<CharacterScreen> {
       case CharacterStatus.success:
         return Padding(
           padding: const EdgeInsets.all(8.0),
-          child: ListView(
-            shrinkWrap: true,
-            controller: scrollController,
-            children: List.generate(
-              controller.lengthCharacters,
-              (index) => CardCharacterWidget(
-                controller.characters[index],
+          child: RefreshIndicator(
+            onRefresh: () async {
+              controller.getCharacter();
+            },
+            child: ListView(
+              shrinkWrap: true,
+              controller: scrollController,
+              children: List.generate(
+                controller.lengthCharacters,
+                (index) => CardCharacterWidget(
+                  controller.characters[index],
+                ),
               ),
             ),
           ),
