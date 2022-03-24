@@ -12,9 +12,7 @@ class CharacterRepository implements ICharacterRepository {
   Future<ResultApi?> getCharacter({String name = '', required int page}) async {
     final result = await _datasource.getCharacter(page: page, name: name);
     if (result is Success) {
-      final model = ResultApi.fromMap(result.data);
-
-      return model;
+      return ResultApi.fromMap(result.data);
     }
     return null;
   }

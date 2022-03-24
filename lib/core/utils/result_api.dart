@@ -20,7 +20,7 @@ class ResultApi {
   factory ResultApi.empty() {
     return ResultApi(
       count: 0,
-      page: 0,
+      page: 1,
       next: true,
       prev: false,
       characters: [],
@@ -42,4 +42,20 @@ class ResultApi {
 
   factory ResultApi.fromJson(String source) =>
       ResultApi.fromMap(json.decode(source));
+
+  ResultApi copyWith({
+    int? count,
+    int? page,
+    bool? next,
+    bool? prev,
+    List<CharacterEntity>? characters,
+  }) {
+    return ResultApi(
+      count: count ?? this.count,
+      page: page ?? this.page,
+      next: next ?? this.next,
+      prev: prev ?? this.prev,
+      characters: characters ?? this.characters,
+    );
+  }
 }
