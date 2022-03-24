@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:pop_network/pop_network.dart';
 import 'package:rick_and_morty/core/utils/result_api.dart';
 import 'package:rick_and_morty/feature/character/data/datasouces/character_datasource.dart';
@@ -12,7 +13,11 @@ class CharacterRepository implements ICharacterRepository {
   Future<ResultApi?> getCharacter({String name = '', required int page}) async {
     final result = await _datasource.getCharacter(page: page, name: name);
     if (result is Success) {
-      return ResultApi.fromMap(result.data);
+      try {
+        return ResultApi.fromMap(result.data);
+      } catch (e) {
+        debugPrint(e.toString());
+      }
     }
     return null;
   }
