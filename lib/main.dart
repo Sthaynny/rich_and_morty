@@ -9,11 +9,13 @@ import 'package:rick_and_morty/injection_conatiner.dart';
 void main() {
   runZonedGuarded(
     () async {
-      await Network.config(
-          baseUrl: 'https://rickandmortyapi.com/api',
-          interceptors: [
-            LogInterceptor(),
-          ]);
+      await PopNetwork.config(
+        baseUrl: 'https://rickandmortyapi.com/api',
+        interceptors: [
+          LogInterceptor(),
+        ],
+        mockedEnvironment: true,
+      );
       setup();
       runApp(const MyApp());
     },

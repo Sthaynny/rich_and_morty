@@ -12,6 +12,7 @@ class CharacterDatasource {
     final endpoint = Endpoint(
       suffixPath: '/character',
       queryParameters: query,
+      mockName: 'mock',
     );
 
     return await ApiManager.requestApi(endpoint: endpoint);
