@@ -4,7 +4,7 @@ import 'package:rick_and_morty/feature/character/presentation/controller/charact
 import 'package:rick_and_morty/feature/character/presentation/widgets/card_character_shimmer.dart';
 import 'package:rick_and_morty/feature/character/presentation/widgets/card_character_widget.dart';
 import 'package:rick_and_morty/feature/character/presentation/widgets/search_character_widget.dart';
-import 'package:rick_and_morty/feature/shared/constants.dart';
+import 'package:rick_and_morty/feature/shared/style/constants.dart';
 import 'package:rick_and_morty/injection_conatiner.dart';
 
 class CharacterScreen extends StatefulWidget {
@@ -34,7 +34,7 @@ class _CharacterScreenState extends State<CharacterScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xFF202428),
+        backgroundColor: blackBackground,
         appBar: AppBar(
           backgroundColor: const Color(0xFF202428),
           elevation: 0.0,

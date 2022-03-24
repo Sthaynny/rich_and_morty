@@ -54,3 +54,5 @@ TextStyle originName = GoogleFonts.poppins(
   fontSize: 14,
   fontWeight: FontWeight.w400,
 );
+
+Color blackBackground = const Color(0xFF202428);

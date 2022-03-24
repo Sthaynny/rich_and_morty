@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rick_and_morty/feature/shared/commom/domain/entities/character_entity.dart';
-import 'package:rick_and_morty/feature/shared/constants.dart';
+import 'package:rick_and_morty/feature/shared/style/constants.dart';
 
 class CardCharacterWidget extends StatelessWidget {
   const CardCharacterWidget(
