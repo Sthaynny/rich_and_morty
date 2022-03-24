@@ -4,8 +4,8 @@ import 'package:rick_and_morty/feature/character_details/widgets/image_circle_wi
 import 'package:rick_and_morty/feature/shared/commom/domain/entities/character_entity.dart';
 import 'package:rick_and_morty/feature/shared/style/constants.dart';
 
-class CharactesrDetails extends StatelessWidget {
-  const CharactesrDetails(this.character, {Key? key}) : super(key: key);
+class CharactesrDetailsScreen extends StatelessWidget {
+  const CharactesrDetailsScreen(this.character, {Key? key}) : super(key: key);
   final CharacterEntity character;
 
   @override
@@ -43,34 +43,37 @@ class CharactesrDetails extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   const SizedBox(height: 60.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        character.name.toUpperCase(),
-                        style: detailName,
-                        overflow: TextOverflow.ellipsis,
-                        softWrap: true,
-                      ),
-                    ],
+                  Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      character.name.toUpperCase(),
+                      style: detailName,
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: true,
+                    ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      FilterChip(
-                        onSelected: (a) {},
-                        label: Row(
-                          children: <Widget>[
-                            character.isAlive ? alive : dead,
-                            const SizedBox(width: 6),
-                            Text(
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 32),
+                    decoration: BoxDecoration(
+                        color: Colors.white.withAlpha(150),
+                        borderRadius: BorderRadius.circular(500)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          character.isAlive ? alive : dead,
+                          const SizedBox(width: 6),
+                          Flexible(
+                            flex: 2,
+                            child: Text(
                               "${character.status} - ${character.species}",
                               style: bp24,
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 30.0),
@@ -82,12 +85,25 @@ class CharactesrDetails extends StatelessWidget {
                     ),
                   ),
                   Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Row(
+                      children: <Widget>[
+                        Text("Type: ", style: gp24),
+                        Text(
+                            character.type.isEmpty ? 'unknown' : character.type,
+                            style: wp24),
+                      ],
+                    ),
+                  ),
+                  Padding(
                     padding: const EdgeInsets.only(left: 29.0),
                     child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
                         Text("Origin: ", style: gp24),
-                        Text(character.origin.name, style: wp24),
+                        Flexible(
+                            child: Text(character.origin.name, style: wp24)),
                       ],
                     ),
                   ),

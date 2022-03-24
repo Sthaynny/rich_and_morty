@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rick_and_morty/feature/character_details/character_datails_screen.dart';
 import 'package:rick_and_morty/feature/shared/commom/domain/entities/character_entity.dart';
 import 'package:rick_and_morty/feature/shared/style/constants.dart';
 
@@ -14,7 +16,9 @@ class CardCharacterWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoButton(
       padding: EdgeInsets.zero,
-      onPressed: () {},
+      onPressed: () {
+        Get.to(CharactesrDetailsScreen(character));
+      },
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 14.0, horizontal: 20.0),
         child: SizedBox(

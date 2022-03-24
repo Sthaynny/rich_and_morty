@@ -22,7 +22,7 @@ TextStyle wp24 = GoogleFonts.poppins(
 );
 TextStyle bp24 = GoogleFonts.poppins(
   color: Colors.black,
-  fontSize: 22,
+  fontSize: 18,
   fontWeight: FontWeight.w400,
 );
 
